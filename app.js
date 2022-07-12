@@ -45,9 +45,13 @@ app.post("/new", async (req, res) => {
 
   await data.save().then((p) => {
     console.log(p);
+    res.send("Completed");
+    
+  }).catch((err)=>{
+    res.send("ERROR");
+    console.log(err);
   });
   //   res.render("home");
-  res.send("Completed");
 });
 
 app.post("/loginadmin", async (req, res) => {
