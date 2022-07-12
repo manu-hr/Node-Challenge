@@ -45,8 +45,7 @@ app.post("/new", async (req, res) => {
 
   await data.save().then((p) => {
     console.log(p);
-    res.send("Completed");
-    
+    res.send(p); 
   }).catch((err)=>{
     res.send("ERROR");
     console.log(err);
